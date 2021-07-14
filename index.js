@@ -214,7 +214,7 @@ function getAverageWordLength(array){
   for (let i = 0; i < array.length; i++){
     wordCount += array[i].split(" ").length;
   }
-  console.log(wordCount)
+  return wordCount / array.length
 }
 
 console.log('stretch task 1', getAverageWordLength(originalFlavors))
