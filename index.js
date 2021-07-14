@@ -198,13 +198,26 @@ Use the getAverageWordLength function below to do the following:
   For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(array, str){
-  const words = str.split(" ")
+function getAverageWordLength(array){
+  const newArray = []
   for (let i = 0; i < array.length; i++){
-
-  } 
-
+  newArray.push(str.split(" ").length)
+  }
+  return newArray;
 }
+
+
+  // let map = {};
+  // for (let i = 0; i < originalFlavors.length; i++) {    
+  //   let item = originalFlavors[i];    map[item] = (map[item] + 1) || 1;  
+  // }  
+  // return map;}
+
+// console.log('stretch 1', originalFlavors);
+  // for (let i = 0; i < array.length; i++){
+
+  // } 
+
 
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
@@ -308,7 +321,6 @@ function getRandomFlavors(array1, array2, array3, array4){
     randomFlavors.push(bigArray[Math.floor(Math.random() * bigArray.length)]) 
   }
   return randomFlavors;
-  console.log(randomFlavors.length)
 }
 
 console.log('bonus task 2', getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors))
