@@ -45,11 +45,11 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
 
-function copy(originalFlavors){
-  /*your code here*/
-  return originalFlavors;
+function copy(array){
+  const newArray = [...array];
+  return newArray;
 }    
-console.log(copy);
+console.log(copy(originalFlavors));
 
 
 
@@ -65,8 +65,8 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(originalFlavors){
-  if (originalFlavors.length === 31)
+function is31Flavors(array){
+  if (array.length === 31)
     return true;
   else
     return false;
@@ -85,11 +85,11 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(originalFlavors){
-  originalFlavors.unshift('Rainbow Sherbert');
-  return originalFlavors;
+function addFlavor(array, string){
+  array.unshift(string);
+  return array;
 }
-console.log(addFlavor(originalFlavors))
+console.log(addFlavor(originalFlavors, 'Rainbow Sherbert'))
 
 
 
@@ -104,9 +104,9 @@ Use the removeLastFlavor function below to do the following:
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(originalFlavors){
-  originalFlavors.pop();
-  return originalFlavors;
+function removeLastFlavor(array){
+  array.pop();
+  return array;
 }
 console.log(removeLastFlavor(originalFlavors))
 
@@ -124,8 +124,9 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 function getFlavorByIndex(array, num1){
-  return originalFlavors[2];
+  return array[num1];
 }
+console.log(getFlavorByIndex(originalFlavors, 2))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -177,13 +178,13 @@ Use the filterByWord function below to do the following:
 function filterByWord(array, string){
   const filteredArray = [];
   for (let i = 0; i < array.length; i++){
-    if(array[i].includes.string){
+    if(array[i].includes(string)){
       filteredArray.push(array[i]);
     }
   }
   return filteredArray;
 }
-console.log(filterByWord(originalFlavors, 'Black Walnut'))
+console.log(filterByWord(originalFlavors, 'Chocolate'))
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
