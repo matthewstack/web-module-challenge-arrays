@@ -198,26 +198,26 @@ Use the getAverageWordLength function below to do the following:
   For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
+// function getAverageWordLength(array){
+//   const newArray = []
+//   for (let i = 0; i < array.length; i++){
+//     newArray.push(array[i].split(" ").length)
+//   }
+//   return newArray;
+// }
+
+// console.log('stretch task 1', getAverageWordLength(originalFlavors))
+
+
 function getAverageWordLength(array){
-  const newArray = []
+  var wordCount = 0;
   for (let i = 0; i < array.length; i++){
-  newArray.push(str.split(" ").length)
+    wordCount += array[i].split(" ").length;
   }
-  return newArray;
+  console.log(wordCount)
 }
 
-
-  // let map = {};
-  // for (let i = 0; i < originalFlavors.length; i++) {    
-  //   let item = originalFlavors[i];    map[item] = (map[item] + 1) || 1;  
-  // }  
-  // return map;}
-
-// console.log('stretch 1', originalFlavors);
-  // for (let i = 0; i < array.length; i++){
-
-  // } 
-
+console.log('stretch task 1', getAverageWordLength(originalFlavors))
 
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
